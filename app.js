@@ -179,23 +179,7 @@ app.get('/report', (req, res) => {
         start_row = start_row + (7 + table.participants.length);
     });
 
-
-
-
-    /*ws_total.cell(2, 1, 9, 1, true)
-        .date(new Date('2019/10/04UTC +0300'))
-        .style(styles.header_top_left);
-    ws_total.cell(2, 2, 2, 15, true)
-        .string('Start Time: 17:41 By iShimon(1123390)')
-        .style(styles.header_top);
-    ws_total.cell(3, 2, 3, 15, true)
-        .string('Table Name: Безымянный')
-        .style(styles.header);
-    ws_total.cell(4, 2, 4, 15, true)
-        .string('Table Information: 0.5/1  NLH  5%  1.0BB  12.0h')
-        .style(styles.header);*/
-
-    wb.write('Ex.xlsx', res);
+    wb.write('report.xlsx', res);
 });
 
 app.listen(5000, () => {
